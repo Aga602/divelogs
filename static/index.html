@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dive Logs - Interactive World Map</title>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌊 My Dive Logs</h1>
+            <p class="subtitle">Exploring the underwater world, one dive at a time</p>
+        </header>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="total-dives">0</div>
+                <div class="stat-label">Total Dives</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-time">0</div>
+                <div class="stat-label">Minutes Underwater</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="max-depth">0</div>
+                <div class="stat-label">Max Depth (m)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="locations">0</div>
+                <div class="stat-label">Locations</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="map-container">
+                <canvas id="map" width="800" height="600"></canvas>
+                <div id="map-tooltip" class="map-tooltip"></div>
+            </div>
+            
+            <div class="dive-list-container">
+                <h2>Dive Log Entries</h2>
+                <div id="dive-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for dive details -->
+    <div id="dive-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="dive-details"></div>
+        </div>
+    </div>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
